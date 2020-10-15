@@ -1,0 +1,193 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* travail sur les deux blocs en flexbox */ 
+
+.grand_container{
+    display: flex;
+}
+
+.bloc1{
+    background-color: rgb(44, 44, 44);
+    border-left: 40px solid rgb(255, 123, 0);
+    width: 600px;
+    height: 770px;
+}
+
+.bloc2{
+    display: flex;
+    background-color: rgb(255, 241, 197);
+    width: 900px;
+    border-right: 30px solid rgb(44, 44, 44);
+}
+
+/**/
+
+#portrait img{              /* réglage pour la photo */
+    width: 170px;
+    height: 330px;
+    border-radius: 4px;
+    border: 3.5px solid rgb(255, 161, 0);
+    margin-top: 25px;
+    margin-left: 200px;
+}
+
+/* Réglage du h1, h2 et du h3 */
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 54px;
+    margin-top: 10px;
+    margin-left: 190px;
+}
+
+h2{
+    color: white;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 40px;
+    margin-top: -40px;
+    margin-left: 195px;
+}
+
+h3{
+    color: white;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-left: 205px;
+}
+
+/**/
+
+/* partie du réglage pour aligner les images avec les textes */
+
+.container1{            /* class du bloc téléphone pour le passer en flexbox */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -20px;   /* réduit l'espace entre les blocs en hauteur */
+    margin-left: 20px;      /* plus de blanc dans la marge */
+}
+
+.container1 img{         /* réglage de la taille de l'image */
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    background:  white;
+    border: 1.5px solid white;
+    border-radius: 50px;
+}
+
+.container1 p{          /* réglage pour le paragraphe en blanc (color), l'espace entre les lignes (line-height) et l'espace entre l'image et le texte (margin-right) */
+    color: white;
+    line-height: 36px;
+    margin-right: 10px;
+}
+
+
+.container2{            /* class du bloc mail pour le passer en flexbox */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -20px; /* réduit l'espace entre les blocs en hauteur */
+    margin-left: 20px;      /* plus de blanc dans la marge */
+}
+
+.container2 img{        /* réglage de la taille de l'image */
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    background:  white;
+    border: 1.5px solid white;
+    border-radius: 50px;
+    border-top: 2px solid white; /* j'ai fait un border pour rendre le blanc du logo mail plus linéaire et propre */
+}
+
+.container2 p{          /* réglage pour le paragraphe en blanc (color), l'espace entre les lignes (line-height) et l'espace entre l'image et le texte (margin-right) */
+    color: white;
+    line-height: 36px;
+    margin-right: 10px;
+}
+
+
+.container3{            /* class du bloc position pour le passer en flexbox */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -20px; /* réduit l'espace entre les blocs en hauteur */
+    margin-left: 20px;      /* plus de blanc dans la marge */
+}
+
+.container3 img{        /* réglage de la taille de l'image */
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    background:  white;
+    border: 1.5px solid white;
+    border-radius: 50px;
+}
+
+.container3 p{          /* réglage pour le paragraphe en blanc (color), l'espace entre les lignes (line-height) et l'espace entre l'image et le texte (margin-right) */
+    color: white;
+    line-height: 36px;
+    margin-right: 10px;
+}
+
+/**/
+
+/* Formulaire */
+
+.bloc_formulaire{
+    margin-right: 0;
+    margin-left: 0;
+    padding: 100px;
+    margin-left: 90px;
+}
+
+
+label, input {
+    margin-bottom: 10px;
+}
+
+input{
+    border: 1px solid rgb(158, 158, 158);
+    margin-left: 165px;
+}
+
+label, textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+textarea {
+    padding: 5px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.formulaire{
+    font-weight: bold;
+}
+
+.submit{
+    background-color: rgb(255, 161, 0);
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    margin-left: 220px;
+}
+
+.texte_intro{
+    font-weight: bolder;
+}
+
+/**/

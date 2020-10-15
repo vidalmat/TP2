@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_contact.css">
+    <title>Contact</title>
+</head>
+    <body>  
+            <div class="grand_container"> <!--grand bloc incluant les bloc 1 et 2 pour pouvoir faire une flexbox-->
+            <div class="bloc1"> <!--début du bloc 1-->
+
+            <div id="portrait">
+            <img src="images/photo1.png" alt="photo">
+            </div>
+
+            <h1>Vidal</h1>
+            <h2>Matthias</h2>
+
+            <h3>Developpeur Web</h3>
+        
+            <!--images : tél, mail, adresse et texte-->
+            <div class="container1">
+            <p><img src="images/tel.png" alt="téléphone"></p>
+                <p>06 22 22 22 22</p>
+            </div>
+
+            <div class="container2">
+            <p><img src="images/mail.png" alt="mail"></p>
+                <p>john.doe@amnesie.com</p>
+            </div>
+
+            <div class="container3">
+            <p><img src="images/position.png" alt="position"></p>
+                <p>Boulevard de Parc, 77700 Coupvray</p>
+            </div>
+            </div> <!--fin du bloc 1-->
+            <!---->
+
+            <div class="bloc2"> <!--début du bloc 2-->
+
+                <div class="bloc_formulaire">
+
+            <!--Création du formulaire-->
+
+            <label class="texte_intro" for="story">Si vous souhaitez me laisser un commentaire, je vous recontacterai</label>
+
+            <textarea id="story" name="story" rows="20" cols="85" placeholder="Écrivez ici...">
+            </textarea>
+
+            <form action="" method="get" class="formulaire">
+                <div class="formulaire">
+                <label for="name">Entrez votre nom: </label>
+                <input type="text" name="name" id="name" required>
+                </div>
+                <div class="formulaire">
+                <label for="email">Entrez votre mail: </label>
+                <input type="email" name="email" id="email" required>
+                </div>
+                <div class="formulaire">
+                <input class="submit" type="submit" value="Envoyer">
+                </div>
+            </form>
+            <!---->
+            
+            </div>
+            </div> <!--fin du bloc 2-->
+            </div> <!--fin du grand bloc-->
+    </body>
+</html>

@@ -1,0 +1,245 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(255, 247, 219);
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+header{
+    background: url(images/fond_header.jpg) fixed;
+    height: 500px;
+    border-left: 50px solid rgb(255, 161, 0);
+}
+
+
+
+/* Menu déroulant */
+
+.nav ul{
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    margin-left: 60px; /* déplace le menu de gauche à droite */
+    list-style-type: none; /* enlève les puces de la liste */
+}
+
+.nav li{
+    display: inline-block;  /* sert à créer un menu à l'horizontal */
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid white; /* sert à mettre un trait vertical sur la droite */
+    text-align: center;
+    text-transform: uppercase; /* sert à mettre la police de caractère de la navigation en majuscule */
+    font-size: 14px;
+    line-height: 35px; /* sert à descendre le texte afin de le centrer dans son bloc */
+}
+
+a:link{ 
+    text-decoration:none; /* supprime le soulignement des liens */
+    color: white;
+} 
+
+.nav li:hover{ /* change la couleur du cadre au passage du curseur */
+    background-color: rgb(255, 161, 0);
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+/* fin du menu déroulant */
+
+/* alignement du menu et des logos des réseaux sociaux */
+
+
+/**/
+
+
+/* flexbox sur la photo et h1 et h2 */
+
+.img_header{
+    display: flex;
+    width: 80%;
+    padding-top: 20px; /* monte ou descend ma class en général */
+}
+
+.img_header img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 161, 0);
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    margin-left: 200px;
+}
+
+
+#titre_header{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 40px;
+    color: white;
+}
+
+h2 span {
+    position: relative;/* Pour un positionnement par rapport à h1. */
+    top: 7px;/* Définir un écart entre le titre et le trait.*/
+    left: 1.5px;/* Débuter au début du contenu de h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 85px;/* Longueur de span = longueur du trait. */
+    border-bottom: 5px solid rgb(255, 161, 0);/* Déclaration du trait.*/
+}
+
+/**/
+
+/*section*/
+
+section{
+    background-color: rgb(70, 70, 70);
+    height: 350px;
+}
+
+.container_cv_activité{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#bloc_cv{
+    width: 300px;
+    height: 300px;
+    margin-top: -23px;
+    background: rgb(219, 219, 219);
+    margin-right: 10px;
+}
+
+#bloc_cv h1{
+    text-align: center;
+    color: gray;
+}
+
+#bloc_activité{
+    width: 300px;
+    height: 300px;
+    margin-top: -23px;
+    background: rgb(219, 219, 219);
+    margin-right: 10px;
+}
+
+#bloc_activité h1{
+    text-align: center;
+    color: gray;
+}
+
+#bloc_contact{
+    width: 300px;
+    height: 300px;
+    margin-top: -23px;
+    background: rgb(219, 219, 219);
+    margin-right: 10px;
+}
+
+#bloc_contact h1{
+    text-align: center;
+    color: gray;
+}
+
+
+ /* span pour filet orange au dessus des blocs à enlever */
+#bloc_cv h1 span{
+    position: relative;/* Pour un positionnement par rapport à h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 92.06%;/* Longueur de span = longueur du trait. */
+    margin-top: -20px;
+    border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
+
+}
+
+#bloc_activité h1 span{
+    position: relative;/* Pour un positionnement par rapport à h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 92.06%;/* Longueur de span = longueur du trait. */
+    margin-top: -20px;
+    border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
+}
+
+#bloc_contact h1 span{
+    position: relative;/* Pour un positionnement par rapport à h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 92%;/* Longueur de span = longueur du trait. */
+    margin-top: -20px;
+    border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
+}
+
+/**/
+
+
+/* menu en responsive */
+
+@media screen and (max-width: 1024px){
+
+body{
+    width: auto;
+}
+
+@media all and (max-width: 1024px)
+{
+
+.btn_navigation{
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+
+.btn_navigation .barre{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    z-index: 20;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.nav{
+    position: relative;
+    left: 10px;
+    margin-left: -10px;
+    width: 20%;
+    padding: 0;
+    height: 250px;
+    text-align: center;
+    background: rgb(54, 54, 54);
+    /*transform: translateX(26%); /* sert à fermer ou ouvrir la fenêtre du menu déroulant */
+    /*-webkit-transform: translateX(26%);*/
+}
+    
+.nav ul{
+    position: absolute;
+    list-style-type: none;
+    top: -59px;
+    transform: translate(-30%);
+}
+
+.nav li{
+    border-right: 0;
+    margin: 5px ;
+    border-bottom: 1px solid white;
+
+}
+
+.nav li:last-child{ /* enlève le dernier trait sous "contact" */
+    border: none;
+}
+    
+.nav :hover{
+    
+}
+}
+
+/**/
