@@ -3,23 +3,72 @@ body{
     margin: 0;
 }
 
+
+/* Menu déroulant */
+
+.menu ul{
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    margin-left: 60px; /* déplace le menu de gauche à droite */
+    list-style-type: none; /* enlève les puces de la liste */
+}
+
+.menu li{
+    display: inline-block;  /* sert à créer un menu à l'horizontal */
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+    border-right: 1px solid white; /* sert à mettre un trait vertical sur la droite */
+    text-align: center;
+    text-transform: uppercase; /* sert à mettre la police de caractère de la navigation en majuscule */
+    font-size: 14px;
+    line-height: 35px; /* sert à descendre le texte afin de le centrer dans son bloc */
+}
+
+.menu li:first-child{
+    display: none;
+}
+
+a:link{ 
+    text-decoration:none; /* supprime le soulignement des liens */
+    color: rgb(255, 247, 219);
+} 
+
+.menu li:hover{ /* change la couleur du cadre au passage du curseur */
+    background-color: rgb(255, 161, 0);
+    color: rgb(255, 247, 219);
+}
+
+a:visited{
+    color: rgb(255, 247, 219);
+}
+/* fin du menu déroulant */
+
+
+
 /* travail sur les deux blocs en flexbox */ 
 
 .grand_container{
     display: flex;
 }
 
+.container1{
+}
+
 .bloc1{
     background-color: rgb(44, 44, 44);
     border-left: 40px solid rgb(255, 123, 0);
-    width: 600px;
-    height: 770px;
+    width: 90%;
+    height: 915px;
 }
 
 .bloc2{
     display: flex;
     background-color: rgb(255, 241, 197);
-    width: 900px;
+    width: 100%;
     border-right: 30px solid rgb(44, 44, 44);
 }
 
@@ -28,10 +77,10 @@ body{
 #portrait img{              /* réglage pour la photo */
     width: 170px;
     height: 330px;
-    border-radius: 4px;
+    border-radius: 2px;
     border: 3.5px solid rgb(255, 161, 0);
     margin-top: 25px;
-    margin-left: 200px;
+    margin-left: 250px;
 }
 
 /* Réglage du h1, h2 et du h3 */
@@ -43,7 +92,7 @@ h1{
     font-weight: bold;
     font-size: 54px;
     margin-top: 10px;
-    margin-left: 190px;
+    margin-left: 240px;
 }
 
 h2{
@@ -52,14 +101,14 @@ h2{
     font-weight: lighter;
     font-size: 40px;
     margin-top: -40px;
-    margin-left: 195px;
+    margin-left: 248px;
 }
 
 h3{
     color: white;
     text-transform: uppercase;
     font-weight: lighter;
-    margin-left: 205px;
+    margin-left: 252px;
 }
 
 /**/
@@ -141,9 +190,9 @@ h3{
 
 .bloc_formulaire{
     margin-right: 0;
-    margin-left: 0;
     padding: 100px;
-    margin-left: 90px;
+    margin-left: 4%;
+    margin-top: 120px;
 }
 
 
@@ -183,11 +232,208 @@ label {
     font-weight: bold;
     color: white;
     border-radius: 5px;
-    margin-left: 220px;
+    margin-left: 215px;
 }
 
 .texte_intro{
     font-weight: bolder;
+}
+
+/**/
+
+
+/* responsive */
+
+@media all and (max-width: 1024px){
+
+body{
+    width: 100%;
+}
+
+    /* travail sur les deux blocs en flexbox */ 
+
+.grand_container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.bloc1{
+    background-color: rgb(44, 44, 44);
+    border-left: 40px solid rgb(255, 123, 0);
+    width: 100%;
+    height: 810px;
+}
+
+.bloc2{
+    display: block;
+    background-color: rgb(255, 241, 197);
+    width: 100%;
+    border-right: none;
+}
+
+/**/
+
+#portrait img{              /* réglage pour la photo */
+    width: 170px;
+    height: 330px;
+    border-radius: 4px;
+    border: 3.5px solid rgb(255, 161, 0);
+    margin-top: 25px;
+    margin-left: 200px;
+}
+
+/* Réglage du h1, h2 et du h3 */
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 54px;
+    margin-top: 10px;
+    margin-left: 195px;
+}
+
+h2{
+    color: white;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 40px;
+    margin-top: -40px;
+    margin-left: 200px;
+}
+
+h3{
+    color: white;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-left: 207px;
+}
+
+/**/
+
+
+/* Formulaire */
+
+.bloc_formulaire{
+    width: 20em;
+    margin: 0;
+}
+
+
+label, input {
+    margin-bottom: 10px;
+}
+
+input{
+    border: 1px solid rgb(158, 158, 158);
+    margin-left: 25%;
+}
+
+label, textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+textarea {
+    width: 100%;
+    height: 70%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.formulaire{
+    font-weight: bold;
+}
+
+.submit{
+    background-color: rgb(255, 161, 0);
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    margin-left: 130px;
+}
+
+.texte_intro{
+    font-weight: bolder;
+}
+
+/* menu burger */   
+.row{
+    display: flex
+}
+
+.hamburger{
+    width: 32px;
+    padding: 0 4px 8px 4px;
+}
+
+.hamburger span{
+    display: block;/* passer le span en block étant donné qu'il était inline*/
+    width: 100%;
+    height: 8px;
+    margin-left: -40px;
+    border-bottom: 3px solid white;
+}
+
+.menu{
+    display: none; /* possibilité de remplacer par un transform: translate pour un effet vague */
+}
+
+#menu:target{       /* le target est une ancre qui cible le menu dans le html < nav id="menu" class="menu"> qui sert à l'ouvrir en allant demander au <a href="#menu"></a>*/
+    display: block;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    position: fixed;
+    top: -2.8%;
+    width: 100%;
+    left: -1vw;
+}
+
+.menu li{               /* Pour annuler le display: inline-block afin que le menu repasse à la verticale */
+    display: block;
+    width: 25%;
+}
+
+.menu li:first-child{
+    display: block;
+}
+
+.menu ul li{
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+    line-height: 60%;
+    border-right: none;
+    border-bottom: 1px solid white;
+}
+
+.menu ul li:last-child{
+    border-bottom: none;
+}
+
+.menu ul li:first-child{ /* pour mettre la croix au centre  */
+    text-align: center;
+}
+
+.menu ul a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+}
+
+/**/
 }
 
 /**/

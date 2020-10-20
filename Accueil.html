@@ -12,30 +12,33 @@
 
     <header>
 
-                <div class="btn_navigation"> <!-- création du bouton du menu de déroulement -->
-                <div class="barre"></div> <!-- traits du menu -->
-                <div class="barre"></div>
-                <div class="barre"></div>
+                <div class="row head_small"> <!-- création du bouton du menu de déroulement -->
+                <div class="hamburger col-2">
+                <a href="#menu">
+                <span></span> <!--les span servent pour créer des traits oranges du menu -->
+                <span></span>
+                <span></span>
+                </a>
                 </div>
-
-                <div class="conteneur_header">
+                </div>
                     
-                    <div class="nav">
+                <nav id="menu" class="menu"> 
                         <ul>
-                            <li><a href="#">Accueil</a></li>
-                            <li><a href="a_propos.html">À propos</a></li>
-                            <li><a href="cv2.html">CV</a></li>
-                            <li><a href="experience.html">Expérience</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">&times;</a></li><!-- création de la croix pour la fermeture du menu -->
+                            <li><a href="#">Accueil</a><span></span></li>
+                            <li><a href="a_propos.html">À propos</a><span></span></li>
+                            <li><a href="cv2.html">CV</a><span></span></li>
+                            <li><a href="experience.html">Expérience</a><span></span></li>
+                            <li><a href="contact.html">Contact</a><span></span></li>
                         </ul>
-                    </div>
+                </nav>
+
                 <!--<div class="img_menu">
                 <a href="#"><img src="images/logo_facebook.png" alt="facebook"></a>
                 <a href="#"><img src="images/logo_twitter.jpg" alt="twitter"></a>
                 <a href="#"><img src="images/logo_linkedin.png" alt="linkedin"></a>
                 <a href="#"><img src="images/logo_insta.png" alt="instagram"></a>
                 </div>-->
-                </div>
 
                 <div class="img_header">
                     <a href="images/photo2.jpg"><img src="images/photo2_mini.jpg" alt="photo accueil" title="cliquez pour agrandir"></a>
@@ -50,15 +53,21 @@
 
                 <div class="container_cv_activité">
                 <div id="bloc_cv">
-                <a href="CV2.html"><h1><span></span>CV</h1></a>
+                <span></span>
+                <a href="CV2.html"><img class="img_cv" src="images/cv.png" alt="cv"></a>
+                
                 </div>
                 
                 <div id="bloc_activité">
-                <a href="a_propos.html"><h1><span></span>À propos</h1></a>
+                <span></span>
+                <a href="a_propos.html"><img class="img_info" src="images/info.png" alt="à propos"></a>
+                
                 </div>    
 
                 <div id="bloc_contact">
-                <a href="contact.html"><h1><span></span>Contact</h1></a>
+                <span></span>
+                <a href="contact.html"><img class="img_contact" src="images/contact.png" alt="contact"></a>
+                
                 </div>
                 </div>
 

@@ -9,6 +9,27 @@
             <div class="grand_container"> <!--grand bloc incluant les bloc 1 et 2 pour pouvoir faire une flexbox-->
             <div class="bloc1"> <!--début du bloc 1-->
 
+            <div class="row head_small"> <!-- création du bouton du menu de déroulement -->
+                <div class="hamburger col-2">
+                <a href="#menu">
+                <span></span> <!--les span servent pour créer des traits oranges du menu -->
+                <span></span>
+                <span></span>
+                </a>
+                </div>
+                </div>
+                    
+                <nav id="menu" class="menu"> 
+                <ul>
+                    <li><a href="#">&times;</a></li><!-- création de la croix pour la fermeture du menu -->
+                    <li><a href="accueil.html">Accueil</a><span></span></li>
+                    <li><a href="a_propos.html">À propos</a><span></span></li>
+                    <li><a href="cv2.html">CV</a><span></span></li>
+                    <li><a href="experience.html">Expérience</a><span></span></li>
+                    <li><a href="contact.html">Contact</a><span></span></li>
+                </ul>
+                </nav>
+                
             <div id="portrait">
             <img src="images/photo1.png" alt="photo">
             </div>
@@ -44,16 +65,15 @@
 
             <label class="texte_intro" for="story">Si vous souhaitez me laisser un commentaire, je vous recontacterai</label>
 
-            <textarea id="story" name="story" rows="20" cols="85" placeholder="Écrivez ici...">
-            </textarea>
+            <textarea id="story" name="story" rows="20" cols="85" placeholder="Écrivez ici..."></textarea>
 
-            <form action="" method="get" class="formulaire">
+            <form action="#" method="get" class="formulaire">
                 <div class="formulaire">
-                <label for="name">Entrez votre nom: </label>
+                <label for="name">Entrez votre nom</label>
                 <input type="text" name="name" id="name" required>
                 </div>
                 <div class="formulaire">
-                <label for="email">Entrez votre mail: </label>
+                <label for="email">Entrez votre mail</label>
                 <input type="email" name="email" id="email" required>
                 </div>
                 <div class="formulaire">

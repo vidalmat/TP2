@@ -1,14 +1,474 @@
 body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(61, 61, 61);
     margin: 0;
-    background-color: gray;
+    padding: 0;
 }
 
-img{
-    width: 300px;
-    height: 500px;
-    border-radius: 5px;
+/*effet scroll vers le haut avec une flèche */
+
+#scroll_vers_le_haut
+{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 30px;
+    background:  white;
+    border: 1.5px solid white;
+    border-radius: 50px;
+    padding-top: 0.5px;         /* top et left pour rendre le cercle autour de la flèche, uniforme */
+    padding-left: 0.5px;
+}
+
+#scroll_vers_le_haut img 
+{
+    width: 25px;
+    box-shadow: none;
+}
+
+/**/
+
+/* Menu déroulant */
+
+.menu ul{
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    margin-left: 60px; /* déplace le menu de gauche à droite */
+    list-style-type: none; /* enlève les puces de la liste */
+}
+
+.menu li{
+    display: inline-block;  /* sert à créer un menu à l'horizontal */
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+    border-right: 1px solid white; /* sert à mettre un trait vertical sur la droite */
+    text-align: center;
+    text-transform: uppercase; /* sert à mettre la police de caractère de la navigation en majuscule */
+    font-size: 14px;
+    line-height: 35px; /* sert à descendre le texte afin de le centrer dans son bloc */
+}
+
+.menu li:first-child{
+    display: none;
+}
+
+a:link{ 
+    text-decoration:none; /* supprime le soulignement des liens */
+    color: rgb(255, 247, 219);
+} 
+
+.menu li:hover{ /* change la couleur du cadre au passage du curseur */
+    background-color: rgb(255, 161, 0);
+    color: rgb(255, 247, 219);
+}
+
+a:visited{
+    color: rgb(255, 247, 219);
+}
+/* fin du menu déroulant */
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 100px;
+}
+
+.trait_h1{
+    position: relative;/* Pour un positionnement par rapport à h1. */
+    top: 10px;/* Définir un écart entre le titre et le trait.*/
+    left: 31.8%;/* Débuter au début du contenu de h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 10%;/* Longueur de span = longueur du trait. */
+    border-bottom: 5px solid white;/* Déclaration du trait.*/
 }
 
 p{
     color: white;
 }
+
+
+/* réglage du premier container : img padel mania + h1 + p */
+.container{
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: 20px solid rgb(255, 230, 209);
+    border-bottom: 3px solid rgb(255, 230, 209);
+}
+
+.img_padel{
+    width: 40%;
+    border-left: 20px solid rgb(255, 123, 0);
+}
+
+.bloc_presentation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.bloc_presentation h1{
+    color:  rgb(255, 123, 0);
+    background: black;
+    border-bottom: 2px solid black;  /* à voir car c'est du bidouillage */
+    width: 100%;
+    height: 160px;
+    margin: 0;
+    padding-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bloc_presentation p{
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+.bloc_presentation li{
+    color: white;
+    font-size: 1.5em;
+}
+
+/**/
+
+/* container 2*/
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.terrain_squash{
+    border: 2px solid black;
+    background: rgb(43, 43, 43);
+    padding: 20px;
+}
+.container2 .ter_squash{
+    background: black;
+    color: rgb(255, 123, 0);
+    width: 558px;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+.balle_squash{
+    padding: 20px;
+    border: 2px solid black;
+    background: rgb(43, 43, 43);
+}
+
+.container2 .balle1{
+    background: black;
+    color: rgb(255, 123, 0);
+    width: 985px;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+
+.terrain_padel{
+    border: 2px solid black;
+    padding: 20px;
+    background: rgb(43, 43, 43);
+}
+
+.container2 .ter_padel{
+    background: black;
+    color: rgb(255, 123, 0);
+    width: 1039px;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.balle_padel{
+    border: 2px solid black;
+    padding: 20px;
+    background: rgb(43, 43, 43);
+}
+
+.container2 .balle2{
+    background: black;
+    color: rgb(255, 123, 0);
+    width: 844px;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+/**/
+
+/* réglages des deux derniers blocs des règles du squash et du padel */
+
+h3{
+    padding: 10px;
+    background-color: black;
+    color: rgb(255, 123, 0);
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 5px solid rgb(255, 123, 0);
+}
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.regle1{
+    margin: 50px;
+}
+
+.regle2{
+    margin: 50px;
+}
+
+/**/
+
+
+@media screen and (max-width: 1024px){
+
+
+    body{
+        margin: 25px;
+    }
+
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 4em;
+        margin-bottom: 100px;
+    }
+    
+    span{
+        display: none;
+    }
+
+
+        /* réglage du premier container : img padel mania + h1 + p */
+.container{
+    display: block;
+    border-right: none;
+    border-bottom: 3px solid rgb(255, 230, 209);
+}
+
+.img_padel{
+    margin-left: -10px;
+    width: 100%;
+    border-left: 20px solid rgb(255, 123, 0);
+    margin-bottom: 15vw;
+}
+
+.bloc_presentation{
+    width: 100%;
+}
+
+/**/
+
+
+/* container 2*/
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terrain_squash{
+    border: 2px solid black;
+    background: rgb(43, 43, 43);
+}
+
+.terrain_squash img{
+    width: 100%;
+}
+
+.container2 .ter_squash{
+    width: 97.7/%;
+    background: black;
+    color: rgb(255, 123, 0);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.balle_squash{
+    border: 2px solid black;
+    background: rgb(43, 43, 43);
+}
+
+.balle_squash img{
+    width: 100%;
+}
+
+.container2 .balle1{
+    width: 100%;
+    background: black;
+    color: rgb(255, 123, 0);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.terrain_padel{
+    border: 2px solid black;
+    background: rgb(43, 43, 43);
+}
+
+.terrain_padel img{
+    width: 100%;
+}
+
+.container2 .ter_padel{
+    background: black;
+    color: rgb(255, 123, 0);
+    width: 100%;
+}
+
+.balle_padel{
+    border: 2px solid black;
+    background: rgb(43, 43, 43);
+}
+
+.balle_padel img{
+    width: 100%;
+}
+
+.container2 .balle2{
+    width: 100%;
+    background: black;
+    color: rgb(255, 123, 0);
+}
+
+/**/
+
+
+/* réglages des deux derniers blocs des règles du squash et du padel */
+
+h3{
+    margin-left: -10px;
+    background-color: black;
+    color: rgb(255, 123, 0);
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 5px solid rgb(255, 123, 0);
+}
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.regle1{
+    margin: 50px;
+}
+
+.regle1 img{
+    width: 100%;
+}
+
+.regle2{
+    margin: 50px;
+}
+
+.regle2 img{
+    width: 100%;
+}
+
+
+/* menu burger */   
+.row{
+    display: flex
+}
+
+.hamburger{
+    width: 32px;
+    padding: 0 4px 8px 4px;
+}
+
+.hamburger span{
+    display: block;/* passer le span en block étant donné qu'il était inline*/
+    width: 100%;
+    height: 8px;
+    margin-left: -25px;
+    border-bottom: 3px solid white;
+}
+
+.menu{
+    display: none; /* possibilité de remplacer par un transform: translate pour un effet vague */
+}
+
+#menu:target{       /* le target est une ancre qui cible le menu dans le html < nav id="menu" class="menu"> qui sert à l'ouvrir en allant demander au <a href="#menu"></a>*/
+    display: block;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    position: fixed;
+    top: -2.8%;
+    width: 100%;
+    left: -1vw;
+}
+
+.menu li{               /* Pour annuler le display: inline-block afin que le menu repasse à la verticale */
+    display: block;
+    width: 25%;
+}
+
+.menu li:first-child{
+    display: block;
+}
+
+.menu ul li{
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+    line-height: 60%;
+    border-right: none;
+    border-bottom: 1px solid white;
+}
+
+.menu ul li:last-child{
+    border-bottom: none;
+}
+
+.menu ul li:first-child{ /* pour mettre la croix au centre  */
+    text-align: center;
+}
+
+.menu ul a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+}
+
+/**/
+}
+
+/**/
+
+
+/**/

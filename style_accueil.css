@@ -1,8 +1,26 @@
+/* Définition de notre "grille" à travers la définition des tailles de ses "colonnes" */
+.col-1 { width: 8.33%;}
+.col-2 { width: 16.66%;}
+.col-3 { width: 25%;}
+.col-4 { width: 33.33%;}
+.col-5 { width: 41.66%;}
+.col-6 { width: 50%;}
+.col-7 { width: 58.33%;}
+.col-8 { width: 66.66%;}
+.col-9 { width: 75%;}
+.col-10 { width: 83.33%;}
+.col-11 { width: 91.66%;}
+.col-12 { width: 100%;}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(255, 247, 219);
-    margin: 0;
-    padding: 0;
 }
 
 /* header */
@@ -11,13 +29,14 @@ header{
     background: url(images/fond_header.jpg) fixed;
     height: 500px;
     border-left: 50px solid rgb(255, 161, 0);
+    margin-top: -20px;
 }
 
 
 
 /* Menu déroulant */
 
-.nav ul{
+.menu ul{
     padding: 20px;
     padding-top: 40px;
     margin: 20px;
@@ -25,12 +44,13 @@ header{
     list-style-type: none; /* enlève les puces de la liste */
 }
 
-.nav li{
+.menu li{
     display: inline-block;  /* sert à créer un menu à l'horizontal */
     width: 100px;
     height: 40px;
     margin: 0;
     padding: 0;
+    padding-top: 6px;
     border-right: 1px solid white; /* sert à mettre un trait vertical sur la droite */
     text-align: center;
     text-transform: uppercase; /* sert à mettre la police de caractère de la navigation en majuscule */
@@ -38,18 +58,22 @@ header{
     line-height: 35px; /* sert à descendre le texte afin de le centrer dans son bloc */
 }
 
+.menu li:first-child{
+    display: none;
+}
+
 a:link{ 
     text-decoration:none; /* supprime le soulignement des liens */
-    color: white;
+    color: rgb(255, 247, 219);
 } 
 
-.nav li:hover{ /* change la couleur du cadre au passage du curseur */
+.menu li:hover{ /* change la couleur du cadre au passage du curseur */
     background-color: rgb(255, 161, 0);
-    color: white;
+    color: rgb(255, 247, 219);
 }
 
 a:visited{
-    color: white;
+    color: rgb(255, 247, 219);
 }
 /* fin du menu déroulant */
 
@@ -63,7 +87,7 @@ a:visited{
 
 .img_header{
     display: flex;
-    width: 80%;
+    width: 100%;
     padding-top: 20px; /* monte ou descend ma class en général */
 }
 
@@ -72,8 +96,8 @@ a:visited{
     height: 200px;
     border-radius: 50%;
     border: 5px solid rgb(255, 161, 0);
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
     margin-left: 200px;
 }
 
@@ -105,7 +129,7 @@ section{
 .container_cv_activité{
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 100%;
     justify-content: center;
     flex-direction: row;
 }
@@ -118,22 +142,12 @@ section{
     margin-right: 10px;
 }
 
-#bloc_cv h1{
-    text-align: center;
-    color: gray;
-}
-
 #bloc_activité{
     width: 300px;
     height: 300px;
     margin-top: -23px;
     background: rgb(219, 219, 219);
     margin-right: 10px;
-}
-
-#bloc_activité h1{
-    text-align: center;
-    color: gray;
 }
 
 #bloc_contact{
@@ -144,42 +158,54 @@ section{
     margin-right: 10px;
 }
 
-#bloc_contact h1{
-    text-align: center;
-    color: gray;
+.img_cv{
+    display: inline-block;
+    width: 50%;
+    opacity: 0.92;
+    margin-left: 25%;
+    margin-top: 17%;
+}
+
+.img_info{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 17%;
+}
+
+.img_contact{
+    width: 45%;
+    margin-left: 28%;
+    margin-top: 23%;
 }
 
 
  /* span pour filet orange au dessus des blocs à enlever */
-#bloc_cv h1 span{
+#bloc_cv span{
     position: relative;/* Pour un positionnement par rapport à h1. */
     display: block;/* Définir le span du type bloc. */
     width: 92.06%;/* Longueur de span = longueur du trait. */
-    margin-top: -20px;
     border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
 
 }
 
-#bloc_activité h1 span{
+#bloc_activité span{
     position: relative;/* Pour un positionnement par rapport à h1. */
     display: block;/* Définir le span du type bloc. */
     width: 92.06%;/* Longueur de span = longueur du trait. */
-    margin-top: -20px;
     border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
 }
 
-#bloc_contact h1 span{
+#bloc_contact span{
     position: relative;/* Pour un positionnement par rapport à h1. */
     display: block;/* Définir le span du type bloc. */
     width: 92%;/* Longueur de span = longueur du trait. */
-    margin-top: -20px;
     border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
 }
 
 /**/
 
 
-/* menu en responsive */
+                                            /* menu en responsive */
 
 @media screen and (max-width: 1024px){
 
@@ -187,59 +213,256 @@ body{
     width: auto;
 }
 
+header{
+    margin: 0;
+}
+
 @media all and (max-width: 1024px)
 {
 
-.btn_navigation{
-    position: absolute;
-    left: 10px;
-    top: 30px;
+ /* menu burger */   
+.row{
+    display: flex
 }
 
-.btn_navigation .barre{
+.hamburger{
+    width: 32px;
+    padding: 0 4px 8px 4px;
+}
+
+.hamburger span{
+    display: block;/* passer le span en block étant donné qu'il était inline*/
+    width: 100%;
+    height: 8px;
+    margin-left: -45px;
+    border-bottom: 3px solid white;
+}
+
+.menu{
+    display: none; /* possibilité de remplacer par un transform: translate pour un effet vague */
+}
+
+#menu:target{       /* le target est une ancre qui cible le menu dans le html < nav id="menu" class="menu"> qui sert à l'ouvrir en allant demander au <a href="#menu"></a>*/
     display: block;
-    width: 30px;
-    height: 3px;
-    background: white;
-    z-index: 20;
-    margin-top: 4px;
-    cursor: pointer;
 }
 
-.nav{
-    position: relative;
-    left: 10px;
-    margin-left: -10px;
-    width: 20%;
+.menu ul{
+    list-style: none;
     padding: 0;
-    height: 250px;
+    position: fixed;
+    top: -2.8%;
+    width: 100%;
+    left: -1vw;
+}
+
+.menu li{               /* Pour annuler le display: inline-block afin que le menu repasse à la verticale */
+    display: block;
+    width: 25%;
+}
+
+.menu li:first-child{
+    display: block;
+}
+
+.menu ul li{
+    background-color: rgb(44, 44, 44);
     text-align: center;
-    background: rgb(54, 54, 54);
-    /*transform: translateX(26%); /* sert à fermer ou ouvrir la fenêtre du menu déroulant */
-    /*-webkit-transform: translateX(26%);*/
-}
-    
-.nav ul{
-    position: absolute;
-    list-style-type: none;
-    top: -59px;
-    transform: translate(-30%);
-}
-
-.nav li{
-    border-right: 0;
-    margin: 5px ;
+    line-height: 60%;
+    border-right: none;
     border-bottom: 1px solid white;
+}
+
+.menu ul li:last-child{
+    border-bottom: none;
+}
+
+.menu ul li:first-child{ /* pour mettre la croix à droite */
+    text-align: center;
+}
+
+.menu ul a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+}
+
+.img_header{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 0; /* monte ou descend ma class en général */
+}
+
+.img_header img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 161, 0);
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    margin-left: 150px;
+}
+
+
+#titre_header{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    color: white;
+    margin-left: 50%;
+}
+/**/
+
+@media screen and (max-width: 720px){
+
+    body{
+        width: auto;
+    }
+    
+    @media all and (max-width: 720px)
+    {
+    
+     /* menu burger */   
+    .row{
+        display: flex
+    }
+    
+    .hamburger{
+        width: 32px;
+        padding: 0 4px 8px 4px;
+    }
+    
+    .hamburger span{
+        display: block;/* passer le span en block étant donné qu'il était inline*/
+        width: 100%;
+        height: 8px;
+        margin-left: -45px;
+        border-bottom: 3px solid white;
+    }
+    
+    .menu{
+        display: none; /* possibilité de remplacer par un transform: translate pour un effet vague */
+    }
+    
+    #menu:target{       /* le target est une ancre qui cible le menu dans le html < nav id="menu" class="menu"> qui sert à l'ouvrir en allant demander au <a href="#menu"></a>*/
+        display: block;
+    }
+    
+    .menu ul{
+        list-style: none;
+        padding: 0;
+        position: fixed;
+        top: -2.8%;
+        width: 100%;
+        left: -1vw;
+    }
+    
+    .menu li{               /* Pour annuler le display: inline-block afin que le menu repasse à la verticale */
+        display: block;
+        width: 25%;
+    }
+    
+    .menu li:first-child{
+        display: block;
+    }
+    
+    .menu ul li{
+        background-color: rgb(44, 44, 44);
+        text-align: center;
+        line-height: 60%;
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+    
+    .menu ul li:last-child{
+        border-bottom: none;
+    }
+    
+    .menu ul li:first-child{ /* pour mettre la croix au centre */
+        text-align: center;
+    }
+    
+    .menu ul a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 1em;
+    }
+
+
+    /*section*/
+
+.container_cv_activité{
+    background-color: rgb(70, 70, 70);
+    height: 854px;
+    display: block;
+    flex-direction: row;
+}
+
+#bloc_cv{
+    width: 100%;
+    background: rgb(219, 219, 219);
+    margin-right: 10px;
+}
+
+
+#bloc_activité{
+    width: 100%;
+    background: rgb(219, 219, 219);
+    margin-right: 10px;
+}
+
+#bloc_contact{
+    width: 100%;
+    background: rgb(219, 219, 219);
+    margin-right: 10px;
+}
+
+.img_cv{
+    display: inline-block;
+    width: 30%;
+    opacity: 0.90;
+    margin-left: 35%;
+    margin-top: 11%;
+}
+
+.img_info{
+    width: 40%;
+    margin-left: 29%;
+    margin-top: 8%;
+    opacity: 0.7;
+}
+
+.img_contact{
+    width: 25%;
+    margin-left: 37%;
+    margin-top: 18%;
+}
+
+
+     /* span pour filet orange au dessus des blocs à enlever */
+#bloc_cv span{
+    position: absolute;/* Pour un positionnement par rapport à h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 100%;/* Longueur de span = longueur du trait. */
+    border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
 
 }
 
-.nav li:last-child{ /* enlève le dernier trait sous "contact" */
-    border: none;
+#bloc_activité span{
+    position: absolute;/* Pour un positionnement par rapport à h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 100%;/* Longueur de span = longueur du trait. */
+    border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
 }
-    
-.nav :hover{
-    
+
+#bloc_contact span{
+    position: absolute;/* Pour un positionnement par rapport à h1. */
+    display: block;/* Définir le span du type bloc. */
+    width: 100%;/* Longueur de span = longueur du trait. */
+    border: 12px solid rgb(255, 161, 0);/* Déclaration du trait.*/
 }
-}
+
+
 
 /**/
